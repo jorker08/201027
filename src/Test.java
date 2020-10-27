@@ -87,7 +87,21 @@ public class Test {
 						System.out.println("상세보기 기능을 선택해주세요(1. 댓글 등록, 2. 좋아요, 3. 수정, 4. 삭제, 5. 목록으로) :");
 						int readCmd = sc.nextInt();
 						if(readCmd == 1) {
-							System.out.println("댓글 기능");
+							Reply r = new Reply();
+							System.out.println("댓글을 입력해주세요 : ");
+							String replyBody = sc.next();
+							r.setBody(replyBody);
+							String replyName = "익명";
+							System.out.println("==== " + target.getId() + " ====");
+							System.out.println("번호 : " + target.getId());
+							System.out.println("제목 : " + target.getTitle());
+							System.out.println("내용 : " + target.getBody());
+							System.out.println("===============");
+							System.out.println("------댓글------");
+							System.out.println("내용 : "+ r.getBody());
+							System.out.println("작성자 : "+ replyName);
+							
+							
 						} else if(readCmd == 2) {
 							System.out.println("좋아요 기능");
 						} else if(readCmd == 3) {
